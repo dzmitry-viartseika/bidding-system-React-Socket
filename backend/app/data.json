@@ -33,6 +33,11 @@
       "name": "test",
       "price": "545",
       "owner": "dviartseika"
+    },
+    {
+      "name": "rt",
+      "price": "233",
+      "owner": "dviartseika"
     }
   ]
 }

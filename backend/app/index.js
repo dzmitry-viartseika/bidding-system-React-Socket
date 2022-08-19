@@ -9,7 +9,7 @@ const socketIO = require('socket.io')(http, {
         origin: "http://localhost:3000"
     }
 });
-const savedData = fs.readFileSync("data.json")
+const savedData = fs.readFileSync("app/data.json")
 const objectData = JSON.parse(savedData)
 
 app.use(cors())
@@ -23,7 +23,7 @@ function findProduct(nameKey, myArray, last_bidder, amount){
         }
     }
     const stringData = JSON.stringify(objectData, null, 2)
-    fs.writeFile("data.json", stringData, (err)=> {
+    fs.writeFile("app/data.json", stringData, (err)=> {
         console.error(err)
     })
 }
@@ -39,7 +39,7 @@ socketIO.on('connection', (socket) => {
     socket.on('addProduct', (data) => {
         objectData["products"].push(data)
         const stringData = JSON.stringify(objectData, null, 2)
-        fs.writeFile("data.json", stringData, (err)=> {
+        fs.writeFile("app/data.json", stringData, (err)=> {
             console.error(err)
         })
         socket.broadcast.emit("addProductResponse", data)
@@ -53,7 +53,7 @@ socketIO.on('connection', (socket) => {
 });
 
 app.get("/api", (req, res) => {
-    const data = fs.readFileSync("data.json")
+    const data = fs.readFileSync("app/data.json")
     const products =  JSON.parse(data)
     res.json(products)
 });
