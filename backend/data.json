@@ -8,15 +8,31 @@
     },
     {
       "name": "Lamborghini S50",
-      "price": "200000",
+      "price": "2000005",
       "owner": "susaske40",
-      "last_bidder": "geraldt01"
+      "last_bidder": "dviartseika"
     },
     {
       "name": "Ferrari F560",
       "price": "100000",
       "owner": "samson35",
       "last_bidder": "admiralty20"
+    },
+    {
+      "name": "5",
+      "price": "055",
+      "owner": "wertey"
+    },
+    {
+      "name": "ч",
+      "price": "34343",
+      "owner": "dviartseika",
+      "last_bidder": "dviartseika"
+    },
+    {
+      "name": "test",
+      "price": "545",
+      "owner": "dviartseika"
     }
   ]
 }
